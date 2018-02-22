@@ -1,8 +1,9 @@
 import React from 'react';
+import moment from 'moment';
 
 const About = () => (
     <div>
-        About
+        Current time: {moment().format()}
     </div>
 );
 
