@@ -2,8 +2,8 @@ import Loadable from 'react-loadable';
 import Loading from '../Loading';
 
 const LoadableComponent = Loadable({
-    loader: () => import('./Profile'),
-    loading: Loading
+    loader: () => import(/* webpackChunkName: "profile" */ './Profile'),
+    loading: Loading,
 });
 
 export default LoadableComponent;
