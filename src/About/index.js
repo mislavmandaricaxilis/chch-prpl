@@ -1,9 +1,9 @@
-import React from 'react';
+import Loadable from 'react-loadable';
+import Loading from '../Loading';
 
-const About = () => (
-    <div>
-        About
-    </div>
-);
+const LoadableComponent = Loadable({
+    loader: () => import('./About'),
+    loading: Loading
+});
 
-export default About;
+export default LoadableComponent;

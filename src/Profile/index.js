@@ -1,9 +1,9 @@
-import React from 'react';
+import Loadable from 'react-loadable';
+import Loading from '../Loading';
 
-const Profile = () => (
-    <div>
-        Profile
-    </div>
-);
+const LoadableComponent = Loadable({
+    loader: () => import('./Profile'),
+    loading: Loading
+});
 
-export default Profile;
+export default LoadableComponent;
