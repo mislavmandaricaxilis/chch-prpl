@@ -2,6 +2,8 @@ import React from 'react';
 import moment from 'moment';
 import _ from 'lodash';
 
+import Post from './Post';
+
 const MyPosts = [
     {
         id: 1,
@@ -23,7 +25,7 @@ const Profile = () => (
             Current time: {moment().format()}
         </div>
         <div>
-            {_.map(MyPosts, (x) => <div key={x.id}>{x.name}</div>)}
+            {_.map(MyPosts, (x) => <Post key={x.id} name={x.name} />)}
         </div>
     </React.Fragment>
 );
